@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="button">#705c40</color>
+    <color name="button2">#705c40</color>
+    <color name="backGround">#B7935F</color>
+    <color name="backGroundView">#B7935F</color>
+    <color name="textHadethAndQuran">#FF000000</color>
+    <color name="text">#FF000000</color>
+    <color name="shape">#BEF6F1F1</color>
+    <color name="iconAndText">#FFFFFFFF</color>
+    <color name="transparent">#00F44336</color>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/radio_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <TextView
+        android:id="@+id/radio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/elmessiri"
+        android:text="اذاعة القرأن الكريم"
+        android:textColor="@color/text"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio" />
+
+    <ImageButton
+        android:id="@+id/play_back"
+        android:layout_width="39dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/transparent"
+        android:src="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_text" />
+
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="39dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@color/transparent"
+        android:src="@drawable/icon_playy"
+        app:layout_constraintEnd_toStartOf="@id/play_next"
+        app:layout_constraintStart_toEndOf="@id/play_back"
+        app:layout_constraintTop_toBottomOf="@id/radio_text" />
+
+    <ImageButton
+        android:id="@+id/play_next"
+        android:layout_width="39dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/transparent"
+        android:src="@drawable/icon_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
