@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.abdo.islami.R
 
-class SuraNameAdapter(val items: List<String>) :
+class SuraNameAdapter(private val suraList: List<Sura>) :
     RecyclerView.Adapter<SuraNameAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -16,26 +16,20 @@ class SuraNameAdapter(val items: List<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val suraName = items[position]
-        holder.name.text = suraName
-//        onItemClickListener.let {
-//            ClickListener ->
-//            holder.itemView.setOnClickListener {
-//                onItemClickListener?.onItemClick(position,suraName)
-//            }
-//        }
+        val item = suraList[position]
+        holder.name.text = item.name
         if (onItemClickListener != null) {
             holder.itemView.setOnClickListener {
-                onItemClickListener?.onItemClick(position, suraName)
+                onItemClickListener?.onItemClick(position, item)
             }
         }
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int = suraList.size
     var onItemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick(position: Int, name: String)
+        fun onItemClick(position: Int, item: Sura)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
