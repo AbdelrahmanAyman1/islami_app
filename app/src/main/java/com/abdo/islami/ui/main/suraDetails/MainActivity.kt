@@ -1,4 +1,4 @@
-package com.abdo.islami.main
+package com.abdo.islami.ui.main.suraDetails
 
 import android.annotation.SuppressLint
 import android.os.Bundle

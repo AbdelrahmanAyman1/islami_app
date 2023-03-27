@@ -1,14 +1,17 @@
 package com.abdo.islami.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.abdo.islami.Constants
 import com.abdo.islami.R
+import com.abdo.islami.fragments.adapter.Sura
 import com.abdo.islami.fragments.adapter.SuraNameAdapter
+import com.abdo.islami.ui.SuraDetailsActivity
 
 class QuranFragment : Fragment() {
     val chaptersNames = listOf(
@@ -141,18 +144,33 @@ class QuranFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
+
     }
 
     private fun initRecyclerView() {
         recyclerView = requireView().findViewById(R.id.sura_name_recyclerview)
-        adapter = SuraNameAdapter(chaptersNames)
+        adapter = SuraNameAdapter(getSuraList())
         adapter.onItemClickListener = object : SuraNameAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int, name: String) {
-                Toast.makeText(requireActivity(), name, Toast.LENGTH_LONG).show()
+            override fun onItemClick(position: Int, item: Sura) {
+                showSuraDetails(position, item)
             }
         }
         recyclerView.adapter = adapter
 
+    }
+
+    private fun showSuraDetails(position: Int, sura: Sura) {
+        val intent = Intent(requireContext(), SuraDetailsActivity::class.java)
+        intent.putExtra(Constants.EXTRA_SURA_NAME, sura.name)
+        intent.putExtra(Constants.EXTRA_SURA_POS, position)
+        startActivity(intent)
+    }
+
+    private fun getSuraList(): List<Sura> {
+        val suraList = chaptersNames.map {
+            return@map Sura(name = it)
+        }
+        return suraList
     }
 
 }
