@@ -6,10 +6,10 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/content_of_sura"
+        android:id="@+id/content_of_hadeth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/elmessiri"
+        android:fontFamily="@font/thuluth"
         android:gravity="center"
         android:padding="9dp"
         android:textColor="@color/textHadethAndQuran"
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Surat alfatha" />
+        tools:text="elhadeth" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

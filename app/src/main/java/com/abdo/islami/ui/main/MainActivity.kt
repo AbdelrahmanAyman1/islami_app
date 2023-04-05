@@ -1,4 +1,4 @@
-package com.abdo.islami.ui.main.suraDetails
+package com.abdo.islami.ui.main
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                     pushFragment(RadioFragment())
                 }
             }
+
             return@OnItemSelectedListener true
         })
         bottomNavigation.selectedItemId = R.id.navigation_quran
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
     private fun pushFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
