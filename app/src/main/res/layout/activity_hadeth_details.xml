@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".ui.main.suraDetails.SuraDetailsActivity">
+    tools:context=".ui.main.hadethDetails.HadethDetailsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -18,7 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/transparent"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/transparent"
             app:popupTheme="@style/Theme.Islami.PopupOverlay">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +28,7 @@
                 android:layout_marginEnd="24dp">
 
                 <TextView
-                    android:id="@+id/title_text_view"
+                    android:id="@+id/title_of_hadeth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/elmessiri"
@@ -43,6 +44,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_sura_details" />
+    <include layout="@layout/content_hadeth_details" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

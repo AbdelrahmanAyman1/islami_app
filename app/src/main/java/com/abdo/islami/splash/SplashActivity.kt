@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.abdo.islami.R
-import com.abdo.islami.ui.main.suraDetails.MainActivity
+import com.abdo.islami.ui.main.MainActivity
 
 
 class SplashActivity : AppCompatActivity() {

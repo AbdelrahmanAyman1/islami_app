@@ -1,18 +1,19 @@
-package com.abdo.islami.ui
+package com.abdo.islami.ui.main.suraDetails
 
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.abdo.islami.Constants
 import com.abdo.islami.R
-import com.abdo.islami.ui.main.suraDetails.VersesAdapter
 
 class SuraDetailsActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: VersesAdapter
     lateinit var titleTextView: TextView
 
+    private var lastAction: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sura_details)
@@ -36,8 +37,21 @@ class SuraDetailsActivity : AppCompatActivity() {
         adapter.changeData(lines)
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        finish()
+    override fun onSupportNavigateUp():
+            Boolean {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("هل تريد الخروج")
+        builder.setPositiveButton("نعم") { dialog, which ->
+            finish()
+        }
+
+        builder.setNegativeButton("لا") { dialog, which ->
+
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+
         return true
     }
 }

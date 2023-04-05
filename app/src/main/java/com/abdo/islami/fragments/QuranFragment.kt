@@ -1,5 +1,4 @@
 package com.abdo.islami.fragments
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +10,7 @@ import com.abdo.islami.Constants
 import com.abdo.islami.R
 import com.abdo.islami.fragments.adapter.Sura
 import com.abdo.islami.fragments.adapter.SuraNameAdapter
-import com.abdo.islami.ui.SuraDetailsActivity
+import com.abdo.islami.ui.main.suraDetails.SuraDetailsActivity
 
 class QuranFragment : Fragment() {
     val chaptersNames = listOf(
