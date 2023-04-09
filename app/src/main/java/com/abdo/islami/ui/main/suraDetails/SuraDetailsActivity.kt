@@ -5,8 +5,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.abdo.islami.Constants
 import com.abdo.islami.R
+import com.abdo.islami.constants.Constants
 
 class SuraDetailsActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView

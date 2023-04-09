@@ -1,4 +1,4 @@
-package com.abdo.islami.splash
+package com.abdo.islami.ui.splash
 
 import android.content.Intent
 import android.os.Bundle

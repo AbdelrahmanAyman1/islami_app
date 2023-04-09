@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.abdo.islami.R
-import com.abdo.islami.fragments.HadethFragment
-import com.abdo.islami.fragments.QuranFragment
-import com.abdo.islami.fragments.RadioFragment
-import com.abdo.islami.fragments.SebhaFragment
+import com.abdo.islami.ui.fragments.HadethFragment
+import com.abdo.islami.ui.fragments.QuranFragment
+import com.abdo.islami.ui.fragments.RadioFragment
+import com.abdo.islami.ui.fragments.SebhaFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.switchmaterial.SwitchMaterial

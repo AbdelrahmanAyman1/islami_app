@@ -1,4 +1,4 @@
-package com.abdo.islami.fragments.adapter
+package com.abdo.islami.ui.fragments.adapter
 
 data class Sura(
     val name: String,

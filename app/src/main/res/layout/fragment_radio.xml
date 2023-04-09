@@ -17,8 +17,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.294" />
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/textHadethAndQuran"
+        app:layout_constraintBottom_toTopOf="@+id/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio"
+        app:layout_constraintVertical_bias="0.951" />
+
     <TextView
-        android:id="@+id/radio_text"
+        android:id="@+id/radio_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/elmessiri"
@@ -38,7 +50,7 @@
         android:background="@color/transparent"
         android:src="@drawable/icon_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radio_text" />
+        app:layout_constraintTop_toBottomOf="@id/radio_name_text" />
 
     <ImageButton
         android:id="@+id/play"
@@ -51,7 +63,7 @@
         android:src="@drawable/icon_playy"
         app:layout_constraintEnd_toStartOf="@id/play_next"
         app:layout_constraintStart_toEndOf="@id/play_back"
-        app:layout_constraintTop_toBottomOf="@id/radio_text" />
+        app:layout_constraintTop_toBottomOf="@id/radio_name_text" />
 
     <ImageButton
         android:id="@+id/play_next"
@@ -62,5 +74,5 @@
         android:background="@color/transparent"
         android:src="@drawable/icon_next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radio_text" />
+        app:layout_constraintTop_toBottomOf="@id/radio_name_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.abdo.islami.fragments.adapter
+package com.abdo.islami.ui.fragments.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,16 +7,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.abdo.islami.R
 
-class HadethNameAdapter(val hadethList: List<Hadeth>) :
-    RecyclerView.Adapter<HadethNameAdapter.ViewHolder>() {
+class SuraNameAdapter(private val suraList: List<Sura>) :
+    RecyclerView.Adapter<SuraNameAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_hadeth_num, parent, false)
+            .inflate(R.layout.item_chapter_name, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = hadethList.get(position)
+        val item = suraList[position]
         holder.name.text = item.name
         if (onItemClickListener != null) {
             holder.itemView.setOnClickListener {
@@ -25,15 +25,14 @@ class HadethNameAdapter(val hadethList: List<Hadeth>) :
         }
     }
 
-    override fun getItemCount(): Int = hadethList.size
-
+    override fun getItemCount(): Int = suraList.size
     var onItemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick(position: Int, item: Hadeth)
+        fun onItemClick(position: Int, item: Sura)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name: TextView = itemView.findViewById(R.id.hadeth_num)
+        val name: TextView = itemView.findViewById(R.id.name_of_sura)
     }
 }
