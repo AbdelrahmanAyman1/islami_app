@@ -1,4 +1,4 @@
-package com.abdo.islami.fragments
+package com.abdo.islami.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.abdo.islami.Constants
 import com.abdo.islami.R
-import com.abdo.islami.fragments.adapter.Hadeth
-import com.abdo.islami.fragments.adapter.HadethNameAdapter
+import com.abdo.islami.constants.Constants
+import com.abdo.islami.ui.fragments.adapter.Hadeth
+import com.abdo.islami.ui.fragments.adapter.HadethNameAdapter
 import com.abdo.islami.ui.main.hadethDetails.HadethDetailsActivity
 
 class HadethFragment : Fragment() {

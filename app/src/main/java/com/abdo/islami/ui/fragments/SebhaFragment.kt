@@ -1,4 +1,4 @@
-package com.abdo.islami.fragments
+package com.abdo.islami.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
